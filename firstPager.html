@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src= "https://smtpjs.com/v3/smtp.js"> 
+</script> 
+  <script src="script.js"></script>
+</head>
+<body>
+<center><button type="button" class="btn btn-info btn-lg btn-block" id="few_words"><i>F E W . W O R D S</i></button></center>
+<!-- Button trigger modal -->
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="container">
+
+          <div class="card-transparent">
+              <div class="card-block special-card" style="background-color: rgba(245, 245, 245, 0.5); ">
+                <p id="text_here">
+                  Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known
+                </p>
+                <form method="post"> 
+                  <div class="both_buttons">
+                      <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" 
+                      data-target="#exampleModal" id="No_Button" style="font-size : 26px;height: 60px;" onclick="sendEmail_NO()"> 
+                        No
+                      </button>
+                      <button type="button" class="btn btn-success btn-lg" data-toggle="modal" 
+                      data-target="#exampleModal_2" id="Yes_Button" style="font-size : 26px;height: 60px;" onclick="sendEmail_YES()"> 
+                        YES!!
+                      </button>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- NO -->
+
+
+  <!-- Modal -->
+  <div >
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel"><i><center><b>F E W. W O R D S</b></center></i></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            As expected Bitch
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <!-- Yes container -->
+  <div >
+    <div class="modal fade" id="exampleModal_2" tabindex="-1" role="dialog" aria-labelledby="exampleModal_2Label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModal_2Label"><i><center><b>F E W. W O R D S</b></center></i></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            My love
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <br>
+  <div class="container">
+    <center>    
+      <button type="button" class="btn btn-primary btn-lg c_dis_text" 
+      style="font-size : 24px;height: 60px;"
+      onclick="changeText_Back()"
+      ><b>< Prev</b></button>
+    
+
+      <button type="button" class="btn btn-outline-primary btn-lg c_dis_text" 
+      style="font-size : 24px; height: 60px;"
+      onclick="changeText_Next()"
+      id="formButton"
+      ><b>Next ></b></button>
+    </center>
+
+  </div>
+
+ <script>
+var i =  0;
+function changeText_Back() {
+  console.log(i);
+  var x = document.getElementById("No_Button");
+  x.style.display = "none";
+  var y = document.getElementById("Yes_Button");
+  y.style.display = "none";
+
+  if (i>0)
+  {
+    i=i-1;
+
+    if (i == 0 ){
+    document.getElementById('text_here').innerHTML="Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known";
+    return;
+    }
+    else if (i==1){
+      document.getElementById('text_here').innerHTML="India -2";
+    }else if (i==2){
+      document.getElementById('text_here').innerHTML="Khalistan -3";
+    }
+    else if (i==3){
+      document.getElementById('text_here').innerHTML="Raj -4";
+    }
+    else if (i==4){
+      document.getElementById('text_here').innerHTML="Nepal -5";
+    }
+  
+  } 
+}
+function changeText_Next() {  
+  console.log(i);
+
+
+  if(i==4)
+  {  
+    i=5;
+    var x = document.getElementById("No_Button");
+    x.style.display = "none";
+    console.log("Yes karao")
+    document.getElementById('text_here').innerHTML="";
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+    x.style.display = "block";
+    }
+// Here YES GO
+    var y = document.getElementById("Yes_Button");
+
+    if (y.style.display === "block") {
+      y.style.display = "none";
+    } else {
+    y.style.display = "block";
+    }
+
+
+  }
+
+
+  if(i < 4){
+
+
+    i=i+1;
+
+
+    if (i==1){
+      document.getElementById('text_here').innerHTML="India -2";
+    }else if (i==2){
+      document.getElementById('text_here').innerHTML="Khalistan -3";
+    }
+    else if (i==3){
+      document.getElementById('text_here').innerHTML="Raj -4";
+    }
+    else if (i==4){
+      document.getElementById('text_here').innerHTML="Nepal -5";
+    }
+
+  }
+    
+
+}
+
+function sendEmail_YES() { 
+      Email.send({ 
+        Host: "smtp.gmail.com", 
+        Username: "l154426@lhr.nu.edu.pk", 
+        Password: "04237311191", 
+        To: 'jamalbutt1232@gmail.com', 
+        From: "l154426@lhr.nu.edu.pk", 
+        Subject: "Email jb", 
+        Body: "YESSSSSSSSSSSSSSS!!", 
+      }) 
+        
+    } 
+    function sendEmail_NO() { 
+      Email.send({ 
+        Host: "smtp.gmail.com", 
+        Username: "l154426@lhr.nu.edu.pk", 
+        Password: "04237311191", 
+        To: 'jamalbutt1232@gmail.com', 
+        From: "l154426@lhr.nu.edu.pk", 
+        Subject: "Email jb", 
+        Body: "NO :(", 
+      }) 
+        
+    }     
+ </script> 
+</body>
+</html>
+
+
