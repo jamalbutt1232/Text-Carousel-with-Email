@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   
-  <title>Bootstrap Example</title>
+  <title>Confession</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles.css">
 
@@ -17,7 +17,7 @@
   <script src="script.js"></script>
 </head>
 <body>
-<center><button type="button" class="btn btn-info btn-lg btn-block" id="few_words"><i>F E W . W O R D S</i></button></center>
+<center><button type="button" class="btn btn-info btn-lg btn-block" id="few_words"><i>C O N F E S S I O N</i></button></center>
 <!-- Button trigger modal -->
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -29,10 +29,13 @@
 
           <div class="card-transparent">
               <div class="card-block special-card" style="background-color: rgba(245, 245, 245, 0.5); ">
+               <center>
                 <p id="text_here">
-                  Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known
+                    I still remember the first day I saw you and I still remember the last day. I still remember our every talk, our every interaction and every moment that we spent together. You won't believe the things I did to find you in the years after and I was sooo so happy the day I heard from you again. We are not children anymore and I fear I would lose you again if I wait any longer to express how I feel. So here it is ...
                 </p>
+              </center>
                 <form method="post"> 
+                  <!-- <p id="l_p_text">Will you be my life partner?</p> -->
                   <div class="both_buttons">
                       <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" 
                       data-target="#exampleModal" id="No_Button" style="font-size : 26px;height: 60px;" onclick="sendEmail_NO()"> 
@@ -65,7 +68,8 @@
             </button>
           </div>
           <div class="modal-body">
-            As expected Bitch
+          
+            Thank you for answering. The only thing I want is for you to be happy and I really hope you find someone who gives you everything you deserve.
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
@@ -87,7 +91,7 @@
             </button>
           </div>
           <div class="modal-body">
-            My love
+            Thank you
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
@@ -130,20 +134,21 @@ function changeText_Back() {
     i=i-1;
 
     if (i == 0 ){
-    document.getElementById('text_here').innerHTML="Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known. Lorem ipsum, or lipsum as it is sometimes known";
+    document.getElementById("text_here").style.fontStyle = "normal";
+
+    document.getElementById('text_here').innerHTML=" I still remember the first day I saw you and I still remember the last day. I still remember our every talk, our every interaction and every moment that we spent together. You won't believe the things I did to find you in the years after and I was sooo so happy the day I heard from you again. We are not children anymore and I fear I would lose you again if I wait any longer to express how I feel. So here it is ...";
     return;
     }
     else if (i==1){
-      document.getElementById('text_here').innerHTML="India -2";
+      document.getElementById("text_here").style.fontStyle = "italic";
+
+      document.getElementById('text_here').innerHTML="I love you!I love you so very much that I can't put it into enough words ...";
     }else if (i==2){
-      document.getElementById('text_here').innerHTML="Khalistan -3";
+      document.getElementById("text_here").style.fontStyle = "normal";
+
+      document.getElementById('text_here').innerHTML="I love the way you smile, the way you look, the way you talk and most importantly how good you make me feel about myself. You are the only one that I ever imagined my life with.I am still the same fat guy you knew as I never had anyone to change myself for. I have waited my whole life for us to be together and if I don't ask this now then I know I'll regret it for the rest of my life ...";
     }
-    else if (i==3){
-      document.getElementById('text_here').innerHTML="Raj -4";
-    }
-    else if (i==4){
-      document.getElementById('text_here').innerHTML="Nepal -5";
-    }
+    
   
   } 
 }
@@ -151,13 +156,13 @@ function changeText_Next() {
   console.log(i);
 
 
-  if(i==4)
+  if(i==2)
   {  
-    i=5;
+    i=3;
     var x = document.getElementById("No_Button");
     x.style.display = "none";
     console.log("Yes karao")
-    document.getElementById('text_here').innerHTML="";
+    document.getElementById('text_here').innerHTML="Will you be my life partner?";
     if (x.style.display === "block") {
       x.style.display = "none";
     } else {
@@ -176,23 +181,23 @@ function changeText_Next() {
   }
 
 
-  if(i < 4){
+  if(i < 2){
 
 
     i=i+1;
 
 
     if (i==1){
-      document.getElementById('text_here').innerHTML="India -2";
+      document.getElementById("text_here").style.fontStyle = "italic";
+
+
+      document.getElementById('text_here').innerHTML="I love you!I love you so very much that I can't put it into enough words ...";
     }else if (i==2){
-      document.getElementById('text_here').innerHTML="Khalistan -3";
+      document.getElementById("text_here").style.fontStyle = "normal";
+
+      document.getElementById('text_here').innerHTML="I love the way you smile, the way you look, the way you talk and most importantly how good you make me feel about myself. You are the only one that I ever imagined my life with.I am still the same fat guy you knew as I never had anyone to change myself for. I have waited my whole life for us to be together and if I don't ask this now then I know I'll regret it for the rest of my life ...";
     }
-    else if (i==3){
-      document.getElementById('text_here').innerHTML="Raj -4";
-    }
-    else if (i==4){
-      document.getElementById('text_here').innerHTML="Nepal -5";
-    }
+    
 
   }
     
@@ -204,7 +209,7 @@ function sendEmail_YES() {
         Host: "smtp.gmail.com", 
         Username: "l154426@lhr.nu.edu.pk", 
         Password: "04237311191", 
-        To: 'jamalbutt1232@gmail.com', 
+        To: 'maisamshah57@gmail.com', 
         From: "l154426@lhr.nu.edu.pk", 
         Subject: "Email jb", 
         Body: "YESSSSSSSSSSSSSSS!!", 
@@ -216,7 +221,7 @@ function sendEmail_YES() {
         Host: "smtp.gmail.com", 
         Username: "l154426@lhr.nu.edu.pk", 
         Password: "04237311191", 
-        To: 'jamalbutt1232@gmail.com', 
+        To: 'maisamshah57@gmail.com', 
         From: "l154426@lhr.nu.edu.pk", 
         Subject: "Email jb", 
         Body: "NO :(", 
