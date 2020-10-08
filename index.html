@@ -33,7 +33,9 @@
 <script>
     function authenticate(){
         var value  = (document.getElementById('magic_words').value);
-        if (value == "pakistan"){
+        value = value.toLowerCase();
+
+        if (value == "zara" || value == "zara kazmi"){
 
             window.open( 
               "firstPager.html", "_blank"); 
